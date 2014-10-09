@@ -4,7 +4,7 @@
 _target="arm-linux-gnueabihf"
 pkgname=${_target}-gcc-stage1
 pkgver=4.9.1
-pkgrel=2
+pkgrel=2.1
 pkgdesc="The GNU Compiler Collection. Stage 1 for toolchain building (${_target})"
 arch=(i686 x86_64)
 license=('GPL' 'LGPL')
@@ -43,7 +43,10 @@ build() {
     --with-newlib \
     --disable-libgomp \
     --enable-interwork \
-    --enable-addons
+    --enable-addons \
+    --with-arch=armv6 \
+    --with-float=hard \
+    --with-fpu=vfp
 
   make all-gcc all-target-libgcc
 }

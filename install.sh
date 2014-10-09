@@ -34,10 +34,10 @@ build gcc-stage1
 
 build linux-api-headers
 build glibc-headers
-ln -s "../${prefix}-gcc-stage1/${gcc_filename}" "${prefix}-gcc-stage2/${gcc_filename}"
+ln -sf "../${prefix}-gcc-stage1/${gcc_filename}" "${prefix}-gcc-stage2/${gcc_filename}"
 build gcc-stage2
 
-ln -s "../${prefix}-glibc-headers/${glibc_filename}" "${prefix}-glibc/${glibc_filename}"
+ln -sf "../${prefix}-glibc-headers/${glibc_filename}" "${prefix}-glibc/${glibc_filename}"
 build glibc
-ln -s "../${prefix}-gcc-stage2/${gcc_filename}" "${prefix}-gcc/${gcc_filename}"
+ln -sf "../${prefix}-gcc-stage2/${gcc_filename}" "${prefix}-gcc/${gcc_filename}"
 build gcc

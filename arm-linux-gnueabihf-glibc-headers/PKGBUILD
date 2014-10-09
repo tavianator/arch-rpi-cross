@@ -4,7 +4,7 @@
 _target="arm-linux-gnueabihf"
 pkgname=${_target}-glibc-headers
 pkgver=2.19
-pkgrel=1
+pkgrel=1.1
 pkgdesc="GNU C Library. Stage 1 - headers only. Needed for initialy build toolchain (${_target})"
 arch=(any)
 url="http://www.gnu.org/software/libc/"
@@ -54,6 +54,10 @@ package() {
 
   make install-headers "install_root=${pkgdir}/usr/${_target}" \
     install-bootstrap-headers=yes
+
+  # glibc doesn't support eglibc's install-bootstrap-headers
+  # Luckily a blank gnu/stubs.h is all we need
+  touch "${pkgdir}/usr/${_target}/include/gnu/stubs.h"
 
   mkdir -p "${pkgdir}/usr/${_target}/lib"
   cp csu/crt1.o csu/crti.o csu/crtn.o "${pkgdir}/usr/${_target}/lib"

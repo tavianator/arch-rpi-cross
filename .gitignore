@@ -1,0 +1,8 @@
+*.pkg.*
+src/
+pkg/
+binutils-*.tar.bz2
+gcc-*.tar.bz2
+glibc-*.tar.bz2
+linux-*.tar.xz
+*.part

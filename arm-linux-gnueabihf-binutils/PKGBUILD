@@ -4,7 +4,7 @@
 _target="arm-linux-gnueabihf"
 pkgname=${_target}-binutils
 pkgver=2.24
-pkgrel=1
+pkgrel=1.1
 pkgdesc="A set of programs to assemble and manipulate binary and object files (${_target})"
 arch=(i686 x86_64)
 license=(GPL)
@@ -31,7 +31,8 @@ build() {
     --target=${_target} \
     --host=$CHOST \
     --build=$CHOST \
-    --disable-werror
+    --disable-werror \
+    --enable-plugins
 
   make configure-host
   make

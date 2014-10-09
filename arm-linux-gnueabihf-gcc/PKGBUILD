@@ -31,6 +31,7 @@ build() {
 
   [ $NOEXTRACT -eq 1 ] || ../configure \
     --prefix=/usr \
+    --libexecdir=/usr/lib \
     --program-prefix=${_target}- \
     --target=${_target} \
     --host=$CHOST \
@@ -65,9 +66,6 @@ package() {
     install-target-libstdc++-v3
 
   rm -rf "$pkgdir"/usr/share/{man/man7,info}/
-
-  cp -r "$pkgdir"/usr/libexec/* "$pkgdir/usr/lib/"
-  rm -rf "$pkgdir/usr/libexec"
 
   rm -rf "$pkgdir/usr/share/gcc-${pkgver}/python"
 

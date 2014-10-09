@@ -3,7 +3,7 @@
 _target="arm-linux-gnueabihf"
 pkgname=${_target}-glibc
 pkgver=2.19
-pkgrel=1
+pkgrel=1.1
 pkgdesc="GNU C Library (${_target})"
 arch=(any)
 url="http://www.gnu.org/software/libc/"
@@ -43,6 +43,7 @@ build() {
     --host=${_target} \
     --build=${CHOST} \
     --prefix=/ \
+    --libexecdir=/lib \
     --with-headers=/usr/${_target}/include \
     --enable-kernel=3.14.1 \
     --enable-add-ons=libidn,ports,nptl \

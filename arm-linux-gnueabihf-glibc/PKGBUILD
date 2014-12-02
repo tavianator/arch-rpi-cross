@@ -2,8 +2,8 @@
 
 _target="arm-linux-gnueabihf"
 pkgname=${_target}-glibc
-pkgver=2.19
-pkgrel=1.1
+pkgver=2.20
+pkgrel=0.1
 pkgdesc="GNU C Library (${_target})"
 arch=(any)
 url="http://www.gnu.org/software/libc/"
@@ -15,7 +15,7 @@ conflicts=("${_target}-glibc-headers" "${_target}-eglibc")
 replaces=("${_target}-glibc-headers")
 options=(!strip 'staticlibs')
 source=(http://ftp.gnu.org/gnu/glibc/glibc-${pkgver}.tar.bz2)
-md5sums=('3ca28f5099257aade61b1adedb7e3401')
+md5sums=('5d9d375e670fe546a030061db36e9f3d')
 
 build() {
   cd "$srcdir/glibc-${pkgver}"
@@ -46,7 +46,7 @@ build() {
     --libexecdir=/lib \
     --with-headers=/usr/${_target}/include \
     --enable-kernel=3.14.1 \
-    --enable-add-ons=libidn,ports,nptl \
+    --enable-add-ons \
     --enable-shared \
     --with-tls \
     --with-__thread \

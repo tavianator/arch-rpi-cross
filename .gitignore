@@ -2,7 +2,13 @@
 src/
 pkg/
 binutils-*.tar.bz2
+binutils-gdb/
 gcc-*.tar.bz2
+isl-*.tar.bz2
 glibc-*.tar.bz2
+glibc-*.tar.xz
 linux-*.tar.xz
+patch-*.xz
+*.sig
+*.sign
 *.part

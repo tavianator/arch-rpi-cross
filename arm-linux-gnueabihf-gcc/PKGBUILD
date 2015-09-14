@@ -85,8 +85,6 @@ build() {
       --enable-checking=release \
       --with-default-libstdcxx-abi=gcc4-compatible
 
-  #--enable-languages=c,c++,fortran,go,lto,objc,obj-c++ \
-
   make
 }
 

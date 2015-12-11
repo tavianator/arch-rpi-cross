@@ -1,0 +1,21 @@
+[submodule "arm-linux-gnueabihf-binutils"]
+	path = arm-linux-gnueabihf-binutils
+	url = https://aur.archlinux.org/arm-linux-gnueabihf-binutils.git
+[submodule "arm-linux-gnueabihf-gcc"]
+	path = arm-linux-gnueabihf-gcc
+	url = https://aur.archlinux.org/arm-linux-gnueabihf-gcc.git
+[submodule "arm-linux-gnueabihf-gcc-stage1"]
+	path = arm-linux-gnueabihf-gcc-stage1
+	url = https://aur.archlinux.org/arm-linux-gnueabihf-gcc-stage1.git
+[submodule "arm-linux-gnueabihf-gcc-stage2"]
+	path = arm-linux-gnueabihf-gcc-stage2
+	url = https://aur.archlinux.org/arm-linux-gnueabihf-gcc-stage2.git
+[submodule "arm-linux-gnueabihf-glibc"]
+	path = arm-linux-gnueabihf-glibc
+	url = https://aur.archlinux.org/arm-linux-gnueabihf-glibc.git
+[submodule "arm-linux-gnueabihf-glibc-headers"]
+	path = arm-linux-gnueabihf-glibc-headers
+	url = https://aur.archlinux.org/arm-linux-gnueabihf-glibc-headers.git
+[submodule "arm-linux-gnueabihf-linux-api-headers"]
+	path = arm-linux-gnueabihf-linux-api-headers
+	url = https://aur.archlinux.org/arm-linux-gnueabihf-linux-api-headers.git

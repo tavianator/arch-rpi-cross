@@ -3,8 +3,8 @@
 set -e
 
 prefix="arm-linux-gnueabihf"
-gcc_filename="gcc-5-20160209.tar.bz2"
-isl_filename="isl-0.15.tar.bz2"
+gcc_filename="80f78834.tar.gz"
+isl_filename="isl-0.16.1.tar.bz2"
 glibc_filename="glibc-2.23.tar.xz"
 
 args=("$@")

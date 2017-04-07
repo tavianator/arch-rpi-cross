@@ -3,9 +3,9 @@
 set -e
 
 prefix="arm-linux-gnueabihf"
-gcc_filename="4ca53f06ff7d346ef8021a23108f23a5406a0417.tar.gz"
+gcc_filename="4fc407888a30c5d953816b05c8a8e98ec2ab3101.tar.gz"
 isl_filename="isl-0.16.1.tar.bz2"
-glibc_filename="glibc-2.24.tar.xz"
+glibc_filename="glibc-2.25.tar.xz"
 
 args=("$@")
 

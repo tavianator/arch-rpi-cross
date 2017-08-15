@@ -3,7 +3,7 @@
 set -e
 
 prefix="arm-linux-gnueabihf"
-gcc_filename="81fc9125b24bba5f2761b7986ff4e3de14740291.tar.gz"
+gcc_filename="d791474f3fc2133fa0c310e566988b0cbdff321e.tar.gz"
 isl_filename="isl-0.18.tar.bz2"
 glibc_filename="glibc-2.25.tar.xz"
 

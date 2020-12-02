@@ -10,7 +10,18 @@ glibc_filename="glibc-2.31.tar.xz"
 args=("$@")
 
 function build() {
-    (cd "./${prefix}-$1" && makepkg -i "${args[@]}")
+    if [[ "$args" -eq "--unattended" ]]; then
+      (
+          cd "./${prefix}-$1"
+          package_filename=$(makepkg --packagelist)
+          if [[ ! -f "$package_filename" ]] ; then
+            makepkg --clean --noconfirm
+          fi
+          sudo pacinstall --file "$package_filename" --resolve-conflicts=all --no-confirm
+      )
+    else
+        (cd "./${prefix}-$1" && makepkg -i "${args[@]}")
+    fi
 }
 
 build binutils
